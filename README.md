@@ -39,9 +39,9 @@ YOU WILL HAVE TWO WEEKS TO COMPLETE THIS HOMEWORK ASSIGNMENT,
 START EARLY ON THIS HOMEWORK !!! DUE NOVEMBER 7 11:59 PM
 _______________________________________________________________________________________
 PART - 1
-[]add a link to app component that navigates to a searchHistory component. be sure to
+[X]add a link to app component that navigates to a searchHistory component. be sure to
       include a route for the searchHistory component
-[]the search history component should include a link to navigate back to the app
+[X]the search history component should include a link to navigate back to the app
       component when clicked
 []EXTRA CREDIT :: include a redirection route to handle redirecting to the app 
       component in situations where the user types an incorrect ur
@@ -51,7 +51,7 @@ PART - 2
 []Create a service that searches wikipedia for the user search text and returns a promise
        that displays the results in the app component view. For example, a wiki search of 
       "dog" returns the text "Dog Dog meat Dogs in warfare Dog behavior …"
-[]the search history component should display the users search history and a timestamp
+[X]the search history component should display the users search history and a timestamp
       for each search. There should be a corresponding array storing the users searches
 []EXTRA CREDIT : ADD THE USERS SEARCH HISTORY TO A LIST ’searchHistory' IN  
       FIREBASE. THE PAYLOAD SHOULD LOOK LIKE THIS
