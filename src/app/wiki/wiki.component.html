@@ -1,3 +1,4 @@
-<p>
-  wiki works!
-</p>
+<h3 *ngIf="wikiResults.length">Wikipedia Search Results</h3>
+<div *ngFor="let result of wikiResults">
+  <a href={{result.url}} target="_blank">{{ result.title }}</a>
+</div>

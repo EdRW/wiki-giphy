@@ -3,10 +3,12 @@
 </p>
 <form>
   <div class="form-group">
-      <label for="searchTerm">Enter Search Terms</label>
-      <input type="text" class="form-control" id="searchTerm" name="searchTerm" required #searchTerm>
+      <label for="searchInput">Enter Search Terms</label>
+      <input type="text" class="form-control" id="searchInput" name="searchInput" required #searchInput>
   </div>
-  <button type="submit" class="btn btn-success" (click)="search(searchTerm.value)">Submit</button>
+  <button type="submit" class="btn btn-success" (click)="search(searchInput.value)">Submit</button>
 </form>
-<app-wiki></app-wiki>
+{{ searchTerm }}
+<app-wiki [searchTerm]="searchTerm"></app-wiki>
+<div></div>
 <app-giphy></app-giphy>

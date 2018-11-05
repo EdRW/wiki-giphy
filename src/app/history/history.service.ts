@@ -6,16 +6,19 @@ import { of } from 'rxjs/Observable/of';
 @Injectable()
 export class HistoryService {
   private searches: any[];
+  lastSearchTerm: string;
 
   constructor() {
     this.searches = [];
+    this.lastSearchTerm = '';
   }
 
-  getSearchHistory() {
+  getSearchHistory(): Observable<any[]> {
     return of(this.searches);
   }
 
   addSearchTerm(searchTerm: string) {
+    this.lastSearchTerm = searchTerm;
     this.searches.push({
       searchText: searchTerm,
       createdAt: (new Date()).toString()
