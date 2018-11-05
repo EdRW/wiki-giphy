@@ -10,13 +10,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { WikiSearchService } from './wiki/wiki-search.service';
 import { GiphySearchService } from './giphy/giphy-search.service';
 import { HistoryService } from './history/history.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HistoryComponent,
     WikiComponent,
-    GiphyComponent
+    GiphyComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
