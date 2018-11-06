@@ -62,16 +62,16 @@ PART - 2
                               }
 _______________________________________________________________________________________
 PART-3
-[]create your own giphy account at the following url 
+[X]create your own giphy account at the following url 
       "https://developers.giphy.com/explorer/" . you can login with a facebook
         account or using your email.
-[]use the developers console to generate a query like the following request url for dog giphyus ..... "https://api.giphy.com/v1/gifs/search?api_key=[YOUR-API-KEY]&q=dog&limit=5&offset=0&rating=G&lang=en"
-[]create a new service that sends a request to the giphy api using the above
+[X]use the developers console to generate a query like the following request url for dog giphyus ..... "https://api.giphy.com/v1/gifs/search?api_key=[YOUR-API-KEY]&q=dog&limit=5&offset=0&rating=G&lang=en"
+[X]create a new service that sends a request to the giphy api using the above
        url. the returned search results should be a json payload containing giphys 
        related to the users search text.  The user search text should be added to
        the api request as the “q” parameter in the above url
-[]in the app component display at least one of the giphy responsem images.                    
-[]Do this by creating an img element in the app component binding a
+[X]in the app component display at least one of the giphy responsem images.                    
+[X]Do this by creating an img element in the app component binding a
       giphy url to the src attribute of the image element. 
 * in the case of the dog query the url can be found in the response payload like this "data" : {"images": "fixed_height_downsampled" : "url": "https://media1.giphy.com/media/12pJ8OxSWwO86Y/200_d.gif" ....
 *  If everything is working correctly you will see different giphys in the app component depending on the users search text

@@ -1,4 +1,6 @@
-<h3 *ngIf="wikiResults.length">Wikipedia Search Results</h3>
-<div *ngFor="let result of wikiResults">
-  <a href={{result.url}} target="_blank">{{ result.title }}</a>
+<div *ngIf="wikiResults.length" class="container-fluid border border-primary rounded">
+  <h3>Wikipedia Results</h3>
+  <div *ngFor="let result of wikiResults">
+    <a href={{result.url}} target="_blank">{{ result.title }}</a>
+  </div>
 </div>

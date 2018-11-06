@@ -1,14 +1,17 @@
-<p>
-  home works!
-</p>
-<form>
-  <div class="form-group">
-      <label for="searchInput">Enter Search Terms</label>
-      <input type="text" class="form-control" id="searchInput" name="searchInput" required #searchInput>
+<div class="container">
+    <h2>Welcome to Wiki-Giphy App!</h2>
+  <form>
+    <div class="form-group">
+        <label for="searchInput">Enter Search Terms</label>
+        <input type="text" class="form-control" id="searchInput" name="searchInput" required #searchInput>
+    </div>
+    <button type="submit" class="btn btn-success" (click)="search(searchInput.value)">Submit</button>
+  </form>
+</div>
+<div class="container-fluid pt-5">
+  <div class="row">
+      <app-wiki [searchTerm]="searchTerm" class="col-3"></app-wiki>
+      <app-giphy [searchTerm]="searchTerm" class="col"></app-giphy>
   </div>
-  <button type="submit" class="btn btn-success" (click)="search(searchInput.value)">Submit</button>
-</form>
-{{ searchTerm }}
-<app-wiki [searchTerm]="searchTerm"></app-wiki>
-<div></div>
-<app-giphy></app-giphy>
+</div>
+

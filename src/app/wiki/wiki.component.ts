@@ -30,7 +30,7 @@ export class WikiComponent implements OnInit, OnChanges {
             url: `${this.BASE_WIKI_URL}${pageName}`
           });
         });
-        console.log(`RESULTS: ${response}`);
+        console.log(`WIKI RESULTS: ${response}`);
       });
     }
   }

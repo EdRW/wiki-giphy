@@ -1,3 +1,10 @@
-<p>
-  giphy works!
-</p>
+<div *ngIf="giphyResults.length" class="container-fluid border border-primary rounded">
+  <h3>Giphy Results</h3>
+  <div class="d-flex flex-wrap">
+    <div *ngFor="let result of giphyResults" class="m-2">
+        <a href={{result}} target="_blank">
+            <img src="{{result}}">
+        </a>
+    </div>
+  </div>
+</div>
