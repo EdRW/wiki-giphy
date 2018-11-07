@@ -12,6 +12,14 @@ import { WikiSearchService } from './wiki/wiki-search.service';
 import { GiphySearchService } from './giphy/giphy-search.service';
 import { HistoryService } from './history/history.service';
 import { HomeComponent } from './home/home.component';
+import { LoginService } from './login/login.service';
+
+import { AuthGuard } from './login/auth.guard';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { firebaseConfig } from '../environments/environment';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,15 +27,25 @@ import { HomeComponent } from './home/home.component';
     HistoryComponent,
     WikiComponent,
     GiphyComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
   ],
-  providers: [WikiSearchService, GiphySearchService, HistoryService],
+  providers: [
+    WikiSearchService,
+    GiphySearchService,
+    HistoryService,
+    LoginService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

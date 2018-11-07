@@ -43,7 +43,7 @@ PART - 1
       include a route for the searchHistory component
 [X]the search history component should include a link to navigate back to the app
       component when clicked
-[]EXTRA CREDIT :: include a redirection route to handle redirecting to the app 
+[X]EXTRA CREDIT :: include a redirection route to handle redirecting to the app 
       component in situations where the user types an incorrect ur
 _______________________________________________________________________________________
 PART - 2
