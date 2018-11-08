@@ -1,29 +1,33 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/Observable/of';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { LoginService } from '../login/login.service';
 
 
 @Injectable()
 export class HistoryService {
-  private searches: any[];
   lastSearchTerm: string;
+  searchHistoryRef: any;
 
-  constructor() {
-    this.searches = [];
+  constructor(
+    private loginService: LoginService,
+    private db: AngularFireDatabase
+  ) {
     this.lastSearchTerm = '';
+    this.searchHistoryRef = this.db.list(`currentSession/${this.loginService.userUid}/searches`);
   }
 
   getSearchHistory(): Observable<any[]> {
-    return of(this.searches);
+    return this.searchHistoryRef.valueChanges();
   }
 
   addSearchTerm(searchTerm: string) {
     this.lastSearchTerm = searchTerm;
-    this.searches.push({
+    this.searchHistoryRef.push({
       searchText: searchTerm,
       createdAt: (new Date()).toString()
     });
 
-    console.log(this.searches);
   }
 }

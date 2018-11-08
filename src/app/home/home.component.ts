@@ -26,10 +26,5 @@ export class HomeComponent implements OnInit {
     this.searchTerm = searchTerm;
     console.log(`SERCH TERM: ${searchTerm}`);
     this.historyService.addSearchTerm(searchTerm);
-    /*
-    this.wikiService.search(searchTerm).subscribe( (result: any) => {
-      console.log(result);
-    });
-    */
   }
 }

@@ -9,10 +9,16 @@ import { LoginService } from './login/login.service';
 export class AppComponent {
   title = 'wiki-giphy';
 
-  constructor(private loginService: LoginService) {
+  loggedIn: boolean;
 
+  constructor(private loginService: LoginService) {
+    this.loginService.getUserStatus().subscribe( user => {
+      this.loggedIn = !!user;
+    });
   }
+
   logout() {
+    console.log('LOGGING OUT USER. INCOMING PERMISSIONS ERRORS!');
     this.loginService.signOut();
   }
 }

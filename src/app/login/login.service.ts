@@ -20,7 +20,7 @@ export class LoginService {
     private router: Router,
     private db: AngularFireDatabase
   ) {
-
+    console.log('LOGIN SERVICE CONSTRUCTOR CALLED');
     this.user = this.afAuth.authState
     .switchMap((user) => {
       if (user) {
@@ -75,5 +75,9 @@ export class LoginService {
   signOut() {
     this.afAuth.auth.signOut();
     this.router.navigate(['/']);
+  }
+
+  getUserStatus() {
+    return this.afAuth.user;
   }
 }

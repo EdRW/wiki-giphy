@@ -2,7 +2,7 @@
   <nav class="nav">
       <a class="nav-link" routerLink="/home">Home</a>
       <a class="nav-link" routerLink="/history">History</a>
-      <button (click)="logout()" class="btn btn-primary btn-danger"> Logout </button>
+      <button *ngIf="loggedIn" (click)="logout()" class="btn btn-primary btn-danger"> Logout </button>
   </nav>
   <h2>Welcome to Wiki-Giphy App!</h2>
 </div>

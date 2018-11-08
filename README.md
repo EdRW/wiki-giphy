@@ -53,7 +53,7 @@ PART - 2
       "dog" returns the text "Dog Dog meat Dogs in warfare Dog behavior …"
 [X]the search history component should display the users search history and a timestamp
       for each search. There should be a corresponding array storing the users searches
-[]EXTRA CREDIT : ADD THE USERS SEARCH HISTORY TO A LIST ’searchHistory' IN  
+[X]EXTRA CREDIT : ADD THE USERS SEARCH HISTORY TO A LIST ’searchHistory' IN  
       FIREBASE. THE PAYLOAD SHOULD LOOK LIKE THIS
         searchHistory/{
                                 Userid: ’sdfapuhaph’
