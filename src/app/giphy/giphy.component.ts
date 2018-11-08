@@ -26,7 +26,9 @@ export class GiphyComponent implements OnInit, OnChanges {
           const gifUrl = result['images']['original']['url'];
           this.giphyResults.push(gifUrl);
         });
-        console.log(`GIPHY RESULTS: ${response}`);
+        console.log('GIPHY RESULTS:');
+        console.log(response);
+        console.log('-------------');
       });
     }
   }
